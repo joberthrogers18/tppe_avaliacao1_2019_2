@@ -1,0 +1,25 @@
+Questão 1: Responda cada um dos itens abaixo em um arquivo chamado questao1.txt. Ao terminar de responder a questão, crie um commit com a seguinte mensagem: "Questão 1". Valor 20 pontos - 5 pontos cada resposta.
+
+a) Diferencie interfaces públicas de interfaces publicadas e justifique por que interfaces publicadas não devem ser refatoradas.
+
+    A interface pública é um tipo de interface que tem depêndencia geralmente do projeto local, no qual está sendo desenvolvido e tudo que seja dependente
+    dessa interface quebrará apenas para o projeto a qual ela pertence(local), já a interface publicada é uma interface que já está em "produção"
+    e já tem terceiros que dependem dessa interface, caso ocorra alterações o codigo irá quebrar para todos que usam dela e não apenas de um sistema local como no exemplo de interface pública.
+    Por isso não é legal refatorar a interface publicada pois as mudanças terão que ser refletidas para quem depende da interface publicada para que ela funcione
+    da mesma forma para esses n serviços a qual consomem dela.
+
+b) Qual a diferença entre os maus cheiros "Cirurgia com rifle" e "Mudanças divergentes". Responda informando claramente os princípios de projetos que estão sendo violados em cada um dos maus-cheiros.
+
+    O mau cheiro envolvendo Mundaças divergentes é quando há várias mudanças realizadas em uma classe e na Cirurgia com rifle é quando há uma
+    modificação afeta várias classes na qual depende de onde foi modificado. Isso afeta os princípios de acoplamento e coesão já que se uma modificação
+    altera comportamentamento de várias classes o codigo pode está acoplado e ser menos coeso.
+
+c) Refatoração sempre leva a projetos mais eficientes em termo de desempenho. A afirmativa é verdadeira ou falsa? Justifique.
+
+    Falsa, nem sempre temos a garantia de que terá um desempenho melhor quando o código for refatorado, mas em quesitos de melhora
+    na manutenibilidade e a verbosidade de código a refatoração cobre.
+
+d) Como se tem a garantia de que uma refatoração teve sucesso?
+
+    Se o sistema tiver testes associados e for aplicado a refatoração, para que a refatoração tenha sido considerada de sucesso todos os 
+    testes devem passar, não tendo mudança de comportamento.  
